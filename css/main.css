@@ -40,3 +40,115 @@ body {
 	height: 200px;
 	background-color: darkseagreen;
 }
+
+/* HEADER ============================== */
+.header {
+	min-height: 940px;
+	background: linear-gradient(132deg, #428e5f -17.38%, #112120 78.4%), #204434;
+	color: #fff;
+
+	position: relative;
+
+	padding-top: 44px;
+}
+.header a {
+	color: #fff;
+}
+
+.header:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 96px;
+
+	background-image: url('/img/header/header-bottom.svg');
+	background-size: 100%;
+}
+
+.header__top {
+	margin-bottom: 86px;
+}
+
+.header__content {
+	max-width: 592px;
+}
+
+/* NAV ============================================== */
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* Минимальное расстояние для адаптива */
+	column-gap: 80px;
+}
+
+/* LOGO */
+.logo {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+/* NAV LIST */
+.nav__list {
+	display: flex;
+	column-gap: 80px;
+
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.nav__list a {
+	position: relative;
+
+	transition: width 0.2s linear;
+}
+
+.nav__list a.active::after,
+.nav__list a:hover::after {
+	content: '';
+
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+
+	display: block;
+	height: 4px;
+	width: 80%;
+	background-color: #c4c4c4;
+	border-radius: 100px;
+}
+
+/* NAV LOGIN  */
+.nav__login {
+	display: flex;
+	align-items: center;
+
+	column-gap: 25px;
+
+	font-size: 15px;
+	font-weight: 500;
+	color: #fff;
+}
+
+/* ANCHOR BUTTON */
+.btn {
+	display: inline-block;
+	padding: 13px 44px;
+	border-radius: 100px;
+	background: linear-gradient(130deg, #ff7b4e 15.57%, #ff584e 95.03%), #fff;
+
+	transition: background 0.5s ease-in;
+}
+.btn:hover {
+	color: rgb(245, 233, 127);
+	transition: color 0.2s ease-in;
+
+	background: linear-gradient(130deg, #f74a10 15.57%, #ff3025 95.03%), #fff;
+}
+.btn:active {
+	position: relative;
+	top: 2px;
+}
