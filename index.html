@@ -7,11 +7,18 @@
 	<!-- FAVICON -->
 	<title>GoTrip</title>
 	<link rel="stylesheet" href="css/main.css">
+	<!-- OWL carousel -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+		integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+		integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 
-	<header class="header">
+	<header class="header none">
 		<div class="container">
 			<div class="header__top">
 
@@ -31,18 +38,82 @@
 					</ul>
 
 					<ul class="nav__login">
-						<li><a href="#!">Sign up</a></li>
+						<li class='nav__list'><a href="#!">Sign up</a></li>
 						<li><a href="#!" class='btn'>Login</a></li>
 					</ul>
 				</nav>
 
 			</div>
-			<div class="header__content">
-				CONTENT
-			</div>
-		</div>
+
+			<div class="header__row">
+				<div class="header__content">
+
+					<div class="header__badge">exsplore the world</div>
+					<h1 class="header__title">Explore The Natural
+						Beauty Of Halmahera
+						With Us</h1>
+					<div class="header__text">
+						<p>explore the beauty of god's earth in a beautiful forest and have fun</p>
+					</div>
+					<a href='#!' class="header__btn">Exsplore Now</a>
+
+				</div>
+
+				<div class="header__img">
+					<img src="img/header/header-img.png" alt="woman☕">
+				</div>
+			</div> <!-- /.header__row -->
+
+		</div> <!-- /.container -->
 	</header>
 
+	<main class='main'>
+		<section class="destinations">
+			<div class="container__right">
+
+				<div class="destinations__row">
+					<div class="destinations__content">
+
+						<div class="destinations__badge">Choice Of</div>
+						<h2 class="destinations__title">Destinations</h2>
+						<div class="destination__text">
+							<p>explore the beauty of god's earth in a beautiful forest and have fun</p>
+						</div>
+						<a href='#!' class="destinations__btn">Exsplore Now</a>
+
+					</div>
+
+					<div class="destinations__slider">
+
+						<div class="slider">
+
+							<div class="owl-carousel">
+								<img class='slider__item' src="img/slider/01.jpg" alt="">
+								<img class='slider__item' src="img/slider/02.jpg" alt="">
+								<img class='slider__item' src="img/slider/03.jpg" alt="">
+							</div>
+							<button class='slider__btn slider__btn--prev'>
+								<img src="img/slider/arrow-left.svg" alt="">
+							</button>
+							<button class='slider__btn slider__btn--next'>
+								<img src="img/slider/arrow-right.svg" alt="">
+							</button>
+						</div> <!-- /.slider -->
+
+					</div> <!-- /.destinations__slider -->
+				</div> <!-- /.destinations__row -->
+
+			</div>
+		</section>
+	</main>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+		integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+		integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src='js/main.js'></script>
 </body>
 
 </html>
