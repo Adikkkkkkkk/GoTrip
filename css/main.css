@@ -83,7 +83,7 @@ body {
 	display: flex;
 }
 
-/* NAV ============================================== */
+/* NAV ======================================== */
 
 .nav {
 	display: flex;
@@ -267,6 +267,47 @@ body {
 	max-width: unset;
 	width: 894px;
 	height: 940px;
+}
+
+/* BACKGROUND IMG ELEMENTS  */
+.h-el--1 {
+	position: absolute;
+	top: 173px;
+	left: 696px;
+	z-index: 3;
+
+	height: 63px;
+	width: 48px;
+}
+
+.h-el--2 {
+	position: absolute;
+	top: 236px;
+	right: 96px;
+	z-index: 3;
+
+	height: 37px;
+	width: 157px;
+}
+
+.h-el--3 {
+	position: absolute;
+	top: 751px;
+	left: 560px;
+	z-index: 3;
+
+	height: 37px;
+	width: 157px;
+}
+
+.h-el--4 {
+	position: absolute;
+	top: 700px;
+	right: 57px;
+	z-index: 3;
+
+	height: 83px;
+	width: 63px;
 }
 
 /* MAIN =========================================== */
@@ -589,5 +630,86 @@ body {
 	box-shadow: 0px 0px 12px #ff7b4e;
 }
 .cta__btn:active {
+	transform: translateY(2px);
+}
+
+/* SUBSCRIBE ======================================== */
+.subscribe {
+	padding: 35px 0 50px;
+}
+
+.subscribe__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.subscribe__title {
+	max-width: 494px;
+
+	text-align: center;
+	font-size: 55px;
+	font-weight: 600;
+	color: #0f1f1c;
+
+	margin-bottom: 60px;
+}
+.subscribe-form {
+	border-radius: 35px;
+	background-color: #fff;
+	padding: 12px 15px 12px 46px;
+
+	display: flex;
+	column-gap: 100px;
+}
+
+.subscribe-input {
+	font-size: 24px;
+	font-weight: 500;
+	color: var(--secondary);
+}
+
+/* SUBSCRIBE BUTTON */
+.subscribe-btn {
+	position: relative;
+	z-index: 0;
+	opacity: 1;
+
+	font-size: 25px;
+	font-weight: 600;
+	display: inline-block;
+	padding: 34px 86px;
+	border-radius: 35px;
+	background: linear-gradient(-130deg, #ff4b0f 15.57%, #fe271b 95.03%);
+	color: rgb(245, 233, 127) !important;
+
+	transition: box-shadow 0.2s linear;
+}
+/* Transition gradient */
+.subscribe-btn:after {
+	position: absolute;
+
+	color: #fff;
+	opacity: 1;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	content: 'Subscribe';
+	padding: 34px 86px;
+	border-radius: 35px;
+
+	background: linear-gradient(130deg, #ff7b4e 15.57%, #ff584e 95.03%), #fff;
+
+	transition: opacity 0.4s linear;
+}
+
+.subscribe-btn:hover.subscribe-btn:after {
+	opacity: 0;
+}
+.subscribe-btn:hover {
+	box-shadow: 0px 0px 12px #ff7b4e;
+}
+.subscribe-btn:active {
 	transform: translateY(2px);
 }
