@@ -415,3 +415,179 @@ body {
 	padding-right: 26px;
 	justify-content: flex-end;
 }
+
+/* CUSTOMERS ======================================== */
+.customers {
+	padding: 100px 0 133px;
+}
+
+.customers__row {
+	display: flex;
+	gap: 68px;
+}
+
+.customers__img {
+	max-width: 478px;
+}
+
+.customers__img img {
+	height: 537px;
+	width: 478px;
+	border-radius: 60px;
+}
+
+/* CUSTOMERS CONTENT */
+
+.customers__content {
+	max-width: 565px;
+}
+
+.customers__title {
+	font-size: 45px;
+	font-weight: 500;
+	color: #0f1f1c;
+
+	margin-bottom: 35px;
+}
+
+.review {
+	max-width: 490px;
+}
+
+.review__client {
+	display: flex;
+	align-items: center;
+	column-gap: 33px;
+	margin-bottom: 60px;
+}
+
+.client__img {
+	background-color: #ff794e;
+	border-radius: 71px;
+	overflow: hidden;
+
+	transition: background-color 0.3s linear;
+}
+.client__img:hover {
+	background-color: #ff584e;
+}
+
+.client__name {
+	font-size: 33px;
+	font-weight: 500;
+	color: #0f1f1c;
+
+	margin-bottom: 10px;
+}
+
+.client__country {
+	font-size: 25px;
+	font-weight: 400;
+	color: var(--secondary);
+}
+
+.review__text {
+	font-size: 22px;
+	font-weight: 500;
+	color: rgba(0, 0, 0, 0.5);
+
+	margin-bottom: 30px;
+}
+
+/* CTA ============================================== */
+.cta {
+	padding: 100px 0;
+}
+.cta__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	border-radius: 60px;
+	background-color: #fff;
+	height: 581px;
+	width: 1240px;
+
+	position: relative;
+}
+.cta__content::before,
+.cta__content::after {
+	content: '';
+	position: absolute;
+
+	width: 63px;
+	height: 83px;
+	z-index: 2;
+
+	background: no-repeat url(/img/cta/cta-el-01.svg);
+}
+.cta__content::before {
+	top: 74px;
+	right: 81px;
+}
+.cta__content::after {
+	bottom: 74px;
+	left: 81px;
+}
+
+.cta__title {
+	max-width: 519px;
+	font-size: 45px;
+	font-weight: 500;
+	color: #000;
+
+	margin-bottom: 30px;
+}
+
+.cta__text {
+	font-size: 30px;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.5);
+
+	margin-bottom: 60px;
+}
+
+/* CTA BUTTON */
+.cta__btn {
+	font-size: 20px;
+	font-weight: 500;
+	position: relative;
+	z-index: 0;
+	opacity: 1;
+	display: inline-block;
+	padding: 25px 55px;
+	border-radius: 27px;
+	background: linear-gradient(-130deg, #ff4b0f 15.57%, #fe271b 95.03%);
+	color: rgb(245, 233, 127) !important;
+
+	transition: box-shadow 0.2s linear;
+}
+
+/* Transition gradient */
+.cta__btn:after {
+	position: absolute;
+
+	color: #fff;
+	opacity: 1;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	content: 'Get Started';
+	padding: 25px 55px;
+	border-radius: 27px;
+
+	background: linear-gradient(130deg, #ff7b4e 15.57%, #ff584e 95.03%), #fff;
+
+	transition: opacity 0.4s linear;
+}
+
+.cta__btn:hover.cta__btn:after {
+	opacity: 0;
+}
+.cta__btn:hover {
+	box-shadow: 0px 0px 12px #ff7b4e;
+}
+.cta__btn:active {
+	transform: translateY(2px);
+}
