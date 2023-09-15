@@ -655,6 +655,7 @@ body {
 
 	margin-bottom: 60px;
 }
+
 .subscribe-form {
 	border-radius: 35px;
 	background-color: #fff;
@@ -713,3 +714,5 @@ body {
 .subscribe-btn:active {
 	transform: translateY(2px);
 }
+
+/* FOOTER =========================================== */
