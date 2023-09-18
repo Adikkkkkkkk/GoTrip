@@ -191,6 +191,66 @@ body {
 	transform: translateY(2px);
 }
 
+/* BURGER MENU */
+.nav__toggle {
+	display: none;
+}
+
+.menu-icon-wrapper {
+	width: 40px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-icon {
+	position: relative;
+	width: 40px;
+	height: 6px;
+	background-color: #fff;
+}
+
+.menu-icon::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: -11px;
+	width: 40px;
+	height: 6px;
+	background-color: #fff;
+
+	transition: transform 0.2s ease-in, top 0.1s ease-in;
+}
+
+.menu-icon::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 11px;
+	width: 40px;
+	height: 6px;
+	background-color: #fff;
+
+	transition: transform 0.2s ease-in, top 0.1s ease-in;
+}
+
+.menu-icon.menu-icon-active {
+	background-color: transparent;
+}
+
+.menu-icon.menu-icon-active::before {
+	transform: rotate(45deg);
+	top: 0;
+	transition: top 0.2s linear, transform 0.1s ease-in 0.2s;
+}
+
+.menu-icon.menu-icon-active::after {
+	transform: rotate(-45deg);
+	top: 0;
+	transition: top 0.2s linear, transform 0.1s ease-in 0.2s;
+}
+
 /* HEADER CONTENT */
 
 .header__badge {
@@ -529,6 +589,7 @@ body {
 	border-radius: 60px;
 	background-color: #fff;
 	height: 581px;
+	max-width: 100%;
 	width: 1240px;
 
 	position: relative;
@@ -742,11 +803,6 @@ body {
 		right: -226px;
 	}
 
-	/* CTA */
-	.cta__content {
-		width: 1090px;
-	}
-
 	/* FOOTER */
 	.footer {
 		padding-bottom: 44px;
@@ -754,4 +810,64 @@ body {
 }
 
 @media (max-width: 1000px) {
+	.nav__list {
+		display: none;
+	}
+
+	.nav__login {
+		display: none;
+	}
+
+	.nav__toggle {
+		display: block;
+	}
+
+	.nav--mobile {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 99;
+
+		flex-direction: column;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		align-items: center;
+
+		background: linear-gradient(209deg, #428e5f -17.38%, #112120 78.4%), #204434;
+	}
+
+	.nav--mobile .logo {
+		font-size: 44px;
+	}
+
+	.nav--mobile .nav__list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 40px;
+
+		font-size: 32px;
+	}
+
+	.nav--mobile .nav__list a.active::after,
+	.nav--mobile .nav__list a:hover::after {
+		display: none;
+	}
+
+	.nav--mobile .nav__login {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 40px;
+
+		font-size: 32px;
+	}
+
+	.nav--mobile .nav__toggle {
+		position: fixed;
+		top: 50px;
+		right: 50px;
+	}
 }
